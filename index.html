@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDoer - CAS FEE Projekt1</title>
+        <link rel="icon" href="./favicon.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="all" href="css/layout.css" id="layout">
+        <link rel="stylesheet" type="text/css" media="all" href="css/theme_default.css" type="text/css"
+               media="all" data-theme="theme_default">
+        <link rel="stylesheet alternate" type="text/css" media="all" href="css/theme_matured.css"  data-theme="theme_matured">
+        <link rel="stylesheet alternate" type="text/css" media="all" href="css/theme_peach.css"  data-theme="theme_peach">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="page__title">ToDoer</h1>
+                    <div class="select-wrap theme-switcher">
+                        <select class="select" name="theme" id="js-theme-swicher">
+                            <option class="select__option" value="theme_default">Default Style</option>
+                            <option class="select__option" value="theme_matured">Reifere Personen</option>
+                            <option class="select__option" value="theme_peach">Peachpuff</option>
+                        </select>
+                    </div>
+                    <nav class="header__nav">
+                        <button class="button header-nav__flex-item button--new">New ToDo +</button>
+                        <button class="button header-nav__flex-item button--filter">Show All</button>
+                        <button class="button header-nav__flex-item button--filter">Show not finished</button>
+                        <button class="button header-nav__flex-item button--filter">Show finisched</button>
+                        <div class="select-wrap select-sort header-nav__flex-item">
+                            <select class="select select-sort__select" name="sort">
+                                <option class="select__option" value="created">By created date </option>
+                                <option class="select__option" value="finished">By finished date</option>
+                                <option class="select__option" value="importance">By importance </option>
+                            </select>
+                        </div>
+                        <div class="mobile-icon--gear js-open-mobile-filter"></div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <script src="js/default.js"></script>
+    </body>
+</html>
