@@ -4,3 +4,6 @@
 .header {
     background: #FFDAB9;
 }
+.entry__description {
+    background: rgba(255, 218, 185, 0.6);
+}
