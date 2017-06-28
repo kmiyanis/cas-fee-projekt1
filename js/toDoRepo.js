@@ -56,21 +56,49 @@ let toDoRepo = (function () {
     function getAll() {
         let todos = getStorage ();
         let sortCat = localStorage.getItem('toDoer_filter');
+        let preFiltered = [];
 
         if(!todos || todos.length == 0) {
             return;
         }
-
         if(sortCat!== null && sortCat.length > 0) {
 
-            todos.sort((a, b) => {
-
-                return a[sortCat] - b[sortCat];
+            todos.forEach(function(elem, index){
+                if(elem[sortCat] === '' || elem[sortCat] === undefined) {
+                    preFiltered.push(elem);
+                } else {
+                    preFiltered.unshift(elem);
+                }
             });
-            todos.reverse();
+
+            preFiltered.sort((a, b) => {
+                return a[sortCat] + b[sortCat];
+            });
+
+            return preFiltered;
+
+       /*
+            todos.sort((a, b) => {
+                 a = a[sortCat];
+                 b = b[sortCat];
+                 if(a === null){
+                    return 1;
+                 }
+                 else if(b === null){
+                    return -1;
+                 }
+                 else if(a === b){
+                    return 0;
+                 }
+                 else {
+                    return a < b ? -1 : 1;
+                 }
+            });
+            return todos.reverse();
+        */
+        } else {
+            return todos;
         }
-        console.log(todos);
-        return todos;
     }
 
     function setStorage (todo = toDoList) {

@@ -47,7 +47,7 @@
                                 <div class="entry__checkbox-status js-todo-status {{#if isDone}}checked{{/if}}" data-id="{{id}}" >finished <br>{{#if doneDate}}[ {{dateFromNow doneDate }} ]{{/if}}</div>
                             </div>
                             <div class="entry__col-center">
-                                <div class="entry__title">{{id}} = {{title}}<span class="importance__wrap">{{#stars importance}}★{{/stars}}</span> </div>
+                                <div class="entry__title">{{title}}<span class="importance__wrap">{{#stars importance}}★{{/stars}}</span> </div>
                                 <div class="entry__description">{{descroption}}</div>
                             </div>
                             <div class="entry__col-right">
@@ -72,6 +72,7 @@
                     <textarea id="descroption" class="form__textarea" rows="5">{{descroption}}</textarea>
                     <div class="form__label">Wichtigkeit</div>
                     <div class="rating form__rating">
+                        <input type="radio" name="starValue" value="0" class="rating__input" checked />
                         <label class="rating__label">☆
                             <input type="radio" name="starValue" value="5" class="rating__input" />
                         </label>
