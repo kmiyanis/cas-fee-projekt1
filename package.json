@@ -1,0 +1,19 @@
+{
+  "name": "cas-fee-projekt1-3",
+  "version": "1.0.0",
+  "description": "CAS FEE 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kmiyanis",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kmiyanis/cas-fee-projekt1.git"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "nedb": "^1.8.0"
+  }
+}
